@@ -8,13 +8,18 @@ function setup() {
 }
 
 function draw() {
-  background("black");  
+  background("black");
+  hr=hour()
+mn=minute()
+sc=second() 
+textSize(22)
+fill("white")
+text(hr+" : "+mn+" : "+sc,200,60) 
   angleMode(DEGREES)
   translate(200,200)
   rotate(-90)
-hr=hour()
-mn=minute()
-sc=second()
+  
+
   scAngle=map(sc,0,60,0,360)
   mnAngle=map(mn,0,60,0,360)
   hrAngle=map(hr%12,0,12,0,360)
